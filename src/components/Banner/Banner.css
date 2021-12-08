@@ -3,7 +3,7 @@
     /* if we have a bigger oimage and whe change the size of the window */
     /* it will keep the aspect ratio and still the same */
     object-fit: contain;
-    color: white;
+    color: black;
     height: 448px;
     
 }

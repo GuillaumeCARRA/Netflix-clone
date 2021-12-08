@@ -10,14 +10,14 @@ const REACT_APP_API_KEY = process.env.REACT_APP_API_KEY;
 // we dont have the beginning of the url because
 // we make this request in our file axios.js
 const requests = {
-    fecthTrending:`/trending/all/week?api_key=${REACT_APP_API_KEY}&language=en-US`,
+    fetchTrending:`/trending/all/week?api_key=${REACT_APP_API_KEY}&language=en-US`,
     fetchNetflixOriginals:`/discover/tv?api_key=${REACT_APP_API_KEY}&with_networks=213`,
-    fecthTopRated:`/movie/top_rated?api_key=${REACT_APP_API_KEY}&language=en-US`,
+    fetchTopRated:`/movie/top_rated?api_key=${REACT_APP_API_KEY}&language=en-US`,
     fetchActionMovies:`/discover/movie?api_key=${REACT_APP_API_KEY}&with_genres=28`,
     fetchComedyMovies:`/discover/movie?api_key=${REACT_APP_API_KEY}&with_genres=35`,
-    fecthHorrorMovies:`/discover/movie?api_key=${REACT_APP_API_KEY}&with_genres=27`,
-    fecthRomanceMovies:`/discover/movie?api_key=${REACT_APP_API_KEY}&with_genres=10749`,
-    fectDocumentaries:`/discover/movie?api_key=${REACT_APP_API_KEY}&with_genres=99`,
+    fetchHorrorMovies:`/discover/movie?api_key=${REACT_APP_API_KEY}&with_genres=27`,
+    fetchRomanceMovies:`/discover/movie?api_key=${REACT_APP_API_KEY}&with_genres=10749`,
+    fetchDocumentaries:`/discover/movie?api_key=${REACT_APP_API_KEY}&with_genres=99`,
 }
 
 export default requests; 
