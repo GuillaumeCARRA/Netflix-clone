@@ -37,7 +37,7 @@ function NavBar() {
             <div className="nav__contents">
                 <img 
                     className="nav__logo"
-                    src="https://www.numerama.com/wp-content/uploads/2016/06/netflix-nouveau-logo.jpg" 
+                    src="https://www.numerama.com/content/uploads/2016/06/13502130_10153696123838870_522765110773053650_n-796x796-2.png" 
                     alt="netflix logo" 
                 />
             
