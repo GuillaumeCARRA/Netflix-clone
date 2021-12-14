@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { 
     BrowserRouter as Router, 
     Routes, 
@@ -7,6 +8,8 @@ import {
 import './App.css';
 import HomeScreen from './components/HomeScreen';
 import Login from './components/Login';
+import { auth } from './firebase'; 
+import { login, logout, selectUser } from './features/userSlice'; 
 
 // Router = look at the page route that you're on and determine
 // based on whatever's inside of this and render the good components
@@ -21,7 +24,31 @@ import Login from './components/Login';
 
 function App() {
 
-  const user = null; 
+  const user = useSelector(selectUser); 
+  const dispatch = useDispatch();
+
+  // is going to listen to the user's logged in
+  useEffect(() => {
+    // it's listen at any authentication state changed 
+    // when we refresh it's store to our local memory in our browser
+    // he popped a cookie and he knows we are logged in from before
+    const unsubscribe = auth.onAuthStateChanged((userAuth) => {
+      // if the user exist
+      if (userAuth) {
+        // Logged in
+        console.log(userAuth);
+        dispatch(login({
+          uid: userAuth.uid,
+          email: userAuth.email
+        }))
+      } else {
+        // Logged out 
+        dispatch(logout);
+      }
+    });
+    // clean up the function 
+    return unsubscribe; 
+  }, [])
 
   return (
    
