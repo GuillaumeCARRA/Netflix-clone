@@ -8,6 +8,7 @@ import {
 import './App.css';
 import HomeScreen from './components/HomeScreen';
 import Login from './components/Login';
+import ProfileScreen from './components/ProfileScreen'; 
 import { auth } from './firebase'; 
 import { login, logout, selectUser } from './features/userSlice'; 
 
@@ -43,12 +44,12 @@ function App() {
         }))
       } else {
         // Logged out 
-        dispatch(logout);
+        dispatch(logout());
       }
     });
     // clean up the function 
     return unsubscribe; 
-  }, [])
+  }, [dispatch])
 
   return (
    
@@ -58,6 +59,7 @@ function App() {
         <Login />
         ) : (
         <Routes>
+          <Route path="/profile" element={<ProfileScreen />}/>
           <Route exact path="/" element={<HomeScreen />} />
         </Routes>
         )}

@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Nav.css';
 
 function NavBar() {
@@ -8,6 +9,11 @@ function NavBar() {
     // we start at false because we when that when the website upload
     // butr when we scroll we want the navbar go black
     const [show, setShow] = useState(false);
+
+    // we use history to navigate in our profile 
+    // when i click in the avatar logo  
+    // useNavigate replace useHistory
+    const navigate = useNavigate()
 
     const transitionNavBar = () => {
         // vertical scroll
@@ -36,12 +42,14 @@ function NavBar() {
           <div className="nav">
             <div className="nav__contents">
                 <img 
+                    onClick={() => navigate('/')}
                     className="nav__logo"
-                    src="https://www.numerama.com/content/uploads/2016/06/13502130_10153696123838870_522765110773053650_n-796x796-2.png" 
+                    src="https://icones.pro/wp-content/uploads/2021/04/icone-netflix-symbole-logo-original.png" 
                     alt="netflix logo" 
                 />
             
                 <img 
+                    onClick={() => navigate('/profile')}
                     className="nav__avatar"
                     src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/1bdc9a33850498.56ba69ac2ba5b.png" 
                     alt="avatar logo" 
