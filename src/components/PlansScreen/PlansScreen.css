@@ -1,0 +1,34 @@
+.plansScreen {
+
+}
+
+.plansScreen___plan {
+
+}
+
+
+.plansScreen__info {
+    padding: 20px;
+    opacity: 0.8;
+}
+
+.plansScreen__info:hover {
+    opacity: 1;
+}
+
+.plansScreen__info > h5, h6 {
+    margin-top: 5px;
+    font-size: 0.8rem;
+}
+
+.button__right {
+   margin-left: 560px; 
+   cursor: pointer;
+   padding: 10px 20px;
+   font-size: 1rem;
+   color: #fff; 
+   background-color: #e50914;
+   border: none;
+   outline: none;
+}
+
