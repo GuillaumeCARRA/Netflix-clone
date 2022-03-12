@@ -23,4 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 #API_KEY for the api of tmdb
+#Config from firebase
 .env

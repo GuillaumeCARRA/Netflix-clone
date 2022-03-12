@@ -1,6 +1,6 @@
 // for making request to a server accross the internet
 import axios from 'axios'; 
-require('dotenv').config();
+
 
 // when we make a request we can actually
 // already append the beginning url
